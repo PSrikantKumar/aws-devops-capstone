@@ -1,0 +1,28 @@
+sudo groupadd developers
+
+sudo useradd abhijeet
+
+sudo useradd bharat
+
+sudo usermod -aG developers abhijeet
+
+groups abhijeet
+
+groups bharat
+
+sudo mkdir /secure_data
+
+sudo chown root:developers /secure_data
+
+sudo chmod 770 /secure_data
+
+ls -ld /secure_data
+
+sudo su - abhijeet
+touch /secure_data/abhijeet-test.txt
+ls /secure_data
+exit
+
+sudo su - bharat
+touch /secure_data/bharat-test.txt
+exit

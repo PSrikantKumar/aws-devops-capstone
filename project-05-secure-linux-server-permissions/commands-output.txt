@@ -1,0 +1,40 @@
+Script started on 2026-11-19 16:44:14+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="211" LINES="62"]
+[?2004h]0;clouduser@AZLTT0222435e27: ~/aws-devops-capstone/project-05-secure-linux-server-permissions[01;32mclouduser@AZLTT0222435e27[00m:[01;34m~/aws-devops-capstone/project-05-secure-linux-server-permissions[00m$ [7msudo mkdir /secure_data[27m
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo mkdir /secure_data
+[?2004l[?2004h]0;clouduser@AZLTT0222435e27: ~/aws-devops-capstone/project-05-secure-linux-server-permissions[01;32mclouduser@AZLTT0222435e27[00m:[01;34m~/aws-devops-capstone/project-05-secure-linux-server-permissions[00m$ [7msudo chown root:developers /secure_data[27msudo chown root:developers /secure_data
+[?2004l[?2004h]0;clouduser@AZLTT0222435e27: ~/aws-devops-capstone/project-05-secure-linux-server-permissions[01;32mclouduser@AZLTT0222435e27[00m:[01;34m~/aws-devops-capstone/project-05-secure-linux-server-permissions[00m$ [7msudo chmod 770 /secure_data[27msudo chmod 770 /secure_data
+[?2004l[?2004h]0;clouduser@AZLTT0222435e27: ~/aws-devops-capstone/project-05-secure-linux-server-permissions[01;32mclouduser@AZLTT0222435e27[00m:[01;34m~/aws-devops-capstone/project-05-secure-linux-server-permissions[00m$ [7mls -ld /secure_data[27mls -ld /secure_data
+[?2004ldrwxrwx--- 2 root developers 4096 Nov 19 16:45 [0m[01;34m/secure_data[0m
+[?2004h]0;clouduser@AZLTT0222435e27: ~/aws-devops-capstone/project-05-secure-linux-server-permissions[01;32mclouduser@AZLTT0222435e27[00m:[01;34m~/aws-devops-capstone/project-05-secure-linux-server-permissions[00m$ [7msudo su - alice[27msudo su - alice[K[K[K[Kbhijeet
+[?2004lsu: warning: cannot change directory to /home/abhijeet: No such file or directory
+$ exit
+[?2004h]0;clouduser@AZLTT0222435e27: ~/aws-devops-capstone/project-05-secure-linux-server-permissions[01;32mclouduser@AZLTT0222435e27[00m:[01;34m~/aws-devops-capstone/project-05-secure-linux-server-permissions[00m$ [7msudo userdel abhijeet[27m
+[7msudo userdel bharat[27m[A]0;clouduser@AZLTT0222435e27: ~/aws-devops-capstone/project-05-secure-linux-server-permissions[01;32mclouduser@AZLTT0222435e27[00m:[01;34m~/aws-devops-capstone/project-05-secure-linux-server-permissions[00m$ sudo userdel abhijeet
+sudo userdel bharat
+[?2004l[?2004h]0;clouduser@AZLTT0222435e27: ~/aws-devops-capstone/project-05-secure-linux-server-permissions[01;32mclouduser@AZLTT0222435e27[00m:[01;34m~/aws-devops-capstone/project-05-secure-linux-server-permissions[00m$ [7msudo useradd -m abhijeet[27m
+[7msudo useradd -m bharat[27m[A]0;clouduser@AZLTT0222435e27: ~/aws-devops-capstone/project-05-secure-linux-server-permissions[01;32mclouduser@AZLTT0222435e27[00m:[01;34m~/aws-devops-capstone/project-05-secure-linux-server-permissions[00m$ sudo useradd -m abhijeet
+sudo useradd -m bharat
+[?2004l[?2004h]0;clouduser@AZLTT0222435e27: ~/aws-devops-capstone/project-05-secure-linux-server-permissions[01;32mclouduser@AZLTT0222435e27[00m:[01;34m~/aws-devops-capstone/project-05-secure-linux-server-permissions[00m$ [7msudo usermod -aG developers abhijeet[27msudo usermod -aG developers abhijeet
+[?2004l[?2004h]0;clouduser@AZLTT0222435e27: ~/aws-devops-capstone/project-05-secure-linux-server-permissions[01;32mclouduser@AZLTT0222435e27[00m:[01;34m~/aws-devops-capstone/project-05-secure-linux-server-permissions[00m$ [7mgroups abhijeet[27m
+[7mgroups bharat[27m[A]0;clouduser@AZLTT0222435e27: ~/aws-devops-capstone/project-05-secure-linux-server-permissions[01;32mclouduser@AZLTT0222435e27[00m:[01;34m~/aws-devops-capstone/project-05-secure-linux-server-permissions[00m$ groups abhijeet
+groups bharat
+[?2004labhijeet : abhijeet developers
+bharat : bharat
+[?2004h]0;clouduser@AZLTT0222435e27: ~/aws-devops-capstone/project-05-secure-linux-server-permissions[01;32mclouduser@AZLTT0222435e27[00m:[01;34m~/aws-devops-capstone/project-05-secure-linux-server-permissions[00m$ [7msudo su - abhijeet[27msudo su - abhijeet
+[?2004l$ touch /secure_data/alice-test.txt^[[D^[[D^[[D^[[D^[[D                                 bhijeet-tets  st/ .txt
+$ exit
+[?2004h]0;clouduser@AZLTT0222435e27: ~/aws-devops-capstone/project-05-secure-linux-server-permissions[01;32mclouduser@AZLTT0222435e27[00m:[01;34m~/aws-devops-capstone/project-05-secure-linux-server-permissions[00m$ [7msudo su - bob[27m
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo su - bob
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C  harat
+[?2004l$ touch /secure_data/bob-test.txt^[[D^[[D^[[D                       harat-test.txt
+touch: cannot touch '/secure_data/bharat-test.txt': Permission denied
+$ exit
+[?2004h]0;clouduser@AZLTT0222435e27: ~/aws-devops-capstone/project-05-secure-linux-server-permissions[01;32mclouduser@AZLTT0222435e27[00m:[01;34m~/aws-devops-capstone/project-05-secure-linux-server-permissions[00m$ sudo su - abhijeet
+[?2004l$ touch /secure_data/alice-test.txt             bhijeet-test.txt
+$ ls /secure_datat 
+abhijeet-test.txt
+$ exit
+[?2004h]0;clouduser@AZLTT0222435e27: ~/aws-devops-capstone/project-05-secure-linux-server-permissions[01;32mclouduser@AZLTT0222435e27[00m:[01;34m~/aws-devops-capstone/project-05-secure-linux-server-permissions[00m$ exit
+[?2004lexit
+
+Script done on 2026-11-19 16:58:09+00:00 [COMMAND_EXIT_CODE="0"]
