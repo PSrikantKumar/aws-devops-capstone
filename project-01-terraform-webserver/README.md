@@ -14,3 +14,12 @@
 
  ## Verification
  The web application was accessible via the EC2 public IP.
+
+ ## Evidence
+
+Screenshots are available in the screenshots folder:
+
+- Terraform Apply Success
+- EC2 Instance Running
+- Security Group Configuration
+- Website Running in Browser
