@@ -11,4 +11,4 @@ crash.log
 # OS
 .DS_Store
 
-.deb
+*.deb
