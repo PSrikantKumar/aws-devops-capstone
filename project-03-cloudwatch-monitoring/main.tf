@@ -6,7 +6,7 @@ resource "aws_cloudwatch_metric_alarm" "high_cpu" {
   namespace           = "AWS/EC2"
   period              = 300
   statistic           = "Average"
-  threshold           = 1
+  threshold           = 70
 
   dimensions = {
     InstanceId = var.instance_id

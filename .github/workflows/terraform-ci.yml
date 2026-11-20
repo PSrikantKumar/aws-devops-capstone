@@ -1,0 +1,28 @@
+name: Terraform CI
+
+on:
+  push:
+    branches:
+      - main
+      - feature/**
+
+jobs:
+  terraform-checks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: hashicorp/setup-terraform@v3
+
+      - name: Terraform Format Check
+        run: terraform fmt -check -recursive
+
+      - name: Terraform Validate
+        run: |
+          for dir in $(find . -type f -name "*.tf" -exec dirname {} \; | sort -u); do
+            cd $dir
+            terraform init -backend=false
+            terraform validate
+            cd -
+          done
