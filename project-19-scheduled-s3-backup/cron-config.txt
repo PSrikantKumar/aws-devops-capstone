@@ -1,0 +1,3 @@
+# Project 19 - Scheduled S3 Backup Cron Configuration
+
+*/5 * * * * /home/clouduser/aws-devops-capstone/project-19-scheduled-s3-backup/backup-script.sh
