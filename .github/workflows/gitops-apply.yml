@@ -1,0 +1,23 @@
+name: GitOps Infrastructure Apply
+
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  terraform-apply:
+    if: github.event.pull_request.merged == true
+
+    runs-on: ubuntu-latest
+
+    environment:
+      name: production
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Simulated Terraform Apply
+        run: |
+          echo "Terraform Apply Executed"
+          echo "Infrastructure updated through GitOps workflow"
